@@ -10,3 +10,9 @@ We maken een taken-webapplicatie. Deze moet het volgende kunnen (dit is voor ove
 - Twee modellen (tabllen): Categorie en een voor de Taken zelf, deze hebben onderling een koppeling.
 - Ook twee formuliers, want dan kun je ook zelf je categorie maken. Het is natuurlijk ook mogelijk dit simpel te houden door geowon vaste keuzes toe te voegen.
 - In base.html komt de algemene opmaak voor álle html-pagina's, waaronder voor index.html die de hoofdpagina moet voorstellen!
+
+[ We hadden problemen met Git repo (kapotte .git / push issues). 
+Ik heb het lokaal opgelost door een nieuwe schone map/repo te maken en 
+die opnieuw te koppelen aan GitHub. Daarna heb ik de code opnieuw gecommit en gepusht. 
+Alles staat nu correct online in de juiste repository en werkt weer normaal. 
+Oude kapotte lokale repo gebruik ik niet meer. ]
