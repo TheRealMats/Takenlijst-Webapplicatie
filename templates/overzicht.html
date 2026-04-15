@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    {% for taak in taken %}
+        {{ taak.titel }}
+        {{ taak.beschrijving }}
+        {{ taak.categorie.naam }}   <!-- Hierbij wordt gebruik gemaakt van de directe relatie -->
+        {{ taak.afgerond }}
+    {% endfor %}
+
+{% endblock %}

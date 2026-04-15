@@ -1,0 +1,13 @@
+<!-- de basisopmaak die op elke pagina hetzelfde is (navigatie, header etc.)-->
+
+<!DOCTYPE html> <!-- Vertelt de browser dat dit een HTML5 document is -->
+<html>
+<head>
+    <title>Takenlijstl</title> <!-- Titel die je ziet in het browsertabblad -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Koppelt de CSS -->
+</head>
+<body>
+    {% block content %} <!-- Hier komt de inhoud van andere pagina's, die kunnen dan onderling verbinding maken met base.html! -->
+    {% endblock %}
+</body>
+</html>

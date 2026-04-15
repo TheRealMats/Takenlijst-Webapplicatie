@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="POST" action="/taak/toevoegen">
+
+    <!-- method="POST" betekent dat de data wordt verstuurd naar de server (niet zichtbaar in de URL) -->
+    <!-- action="/taak/toevoegen" betekent naar welke route de data wordt gestuurd als je op verzenden klikt -->
+
+    {{ form.hidden_tag() }}
+    {{ form.titel.label }} {{ form.titel }}
+    {{ form.beschrijving.label }} {{ form.beschrijving }}
+    {{ form.categorie.label }} {{form.categorie }}
+    {{ form.submit() }}
+    </form>
+
+{% endblock %}
