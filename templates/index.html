@@ -2,8 +2,12 @@
 
 {% block content %} <!-- Alles hiertussen wordt ingelaen in base.html -->
 
-    <a href="/taak/toevoegen">Taak toevoegen</a> <br>
-    <a href="/categorie/toevoegen">Categorie toevoegen</a> <br>
-    <a href="/overzicht">Overzicht</a>
+    <div class="container text-center index_opmaak">    <!-- bootstrap classes, index_opmaak is eigen class! -->
+        <h1>Welkom bij Takenlijst</h1>
+        <p>Beheer je taken en categorieën op één plek.</p>
+        <a href="/taak/toevoegen" class="btn btn-primary btn-lg">Taak toevoegen</a>
+        <a href="/categorie/toevoegen" class="btn btn-primary btn-lg">Categorie toevoegen</a>
+        <a href="/overzicht" class="btn btn-primary btn-lg">Overzicht</a>
+    </div>
 
 {% endblock %}

@@ -6,11 +6,18 @@
     <!-- method="POST" betekent dat de data wordt verstuurd naar de server (niet zichtbaar in de URL) -->
     <!-- action="/taak/toevoegen" betekent naar welke route de data wordt gestuurd als je op verzenden klikt -->
 
-    {{ form.hidden_tag() }}
-    {{ form.titel.label }} {{ form.titel }}
-    {{ form.beschrijving.label }} {{ form.beschrijving }}
-    {{ form.categorie.label }} {{form.categorie }}
-    {{ form.submit() }}
-    </form>
+
+    <div class="container formulier_opmaak">    <!-- de laatste is costum class! -->
+        <div class="card p-4">           
+            <h2>Taak toevoegen</h2>
+            <form method="POST" action="/taak/toevoegen">
+                {{ form.hidden_tag() }}
+                {{ form.titel.label }} {{ form.titel }}
+                {{ form.beschrijving.label }} {{ form.beschrijving }}
+                {{ form.categorie.label }} {{ form.categorie }}
+                {{ form.submit() }}
+            </form>
+        </div>
+    </div>
 
 {% endblock %}

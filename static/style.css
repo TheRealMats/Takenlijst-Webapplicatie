@@ -1,1 +1,62 @@
 /* dit is voor de opmaak/styling van de website */
+
+
+
+/* Aalle van de hele pagina */
+
+body {
+    background-color: #ffc423;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* alle voor de index.html pagina (hoofdpagina): */
+
+/* De div die incl de knoppen omhult. centreert alles midden op de pagina */
+.index_opmaak {
+    min-height: calc(100vh - 56px); /* volledige hoogte minus de navbar */
+    display: flex;                   /* zet uitlijning aan */
+    flex-direction: column;          /* stapelt knoppen onder elkaar */
+    justify-content: center;         /* centreert verticaal */
+    align-items: center;             /* centreert horizontaal */
+}
+
+/* De knoppen zelf */
+.index_opmaak .btn {
+    margin: 10px;   /* ruimte tussen de knoppen */
+    width: 200px;   /* alle knoppen even breed */
+}
+
+/* Titel op de indexpagina */
+.index_opmaak h1 {
+    color: #1a1a2e;
+    font-size: 3rem;        /* grote letters (rem = relatieve eenheid) */
+    font-weight: bold;      /* vette lettters */
+    margin-bottom: 10px;    /* ruimte onder de titel */
+}
+
+/* Sloganregel onder de titel */
+.index_opmaak p {
+    color: #1a1a2e;
+    font-size: 1.2rem;      /* iets groter dan standaard tekst */
+    margin-bottom: 120px;    /* ruimte tussen slogan en knoppen */
+}
+
+
+
+/* Alles voor de taak_toevoegen.html pagina: */
+
+/* Centreert het formulier midden op de pagina */
+.formulier_opmaak {
+    min-height: calc(100vh - 56px); /* volledige hoogte minus de navbar */
+    display: flex;                   /* zet uitlijning aan */
+    justify-content: center;         /* centreert verticaal */
+    align-items: center;             /* centreert horizontaal */
+    color: #5fffb4;
+}
+
+/* Breedte van het formulierkaartje */
+.formulier_opmaak .card {
+    width: 500px;   /* pas dit getal aan naar wat je mooi vindt */
+}
