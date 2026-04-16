@@ -1,9 +1,9 @@
-{% extends 'base.html' %}   <!-- Erft de opmaak van base.html -->
-
-{% block content %} <!-- Alles hiertussen wordt ingelaen in base.html -->
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Takenlijst</h1>
 
     <a href="/taak/toevoegen">Taak toevoegen</a> <br>
     <a href="/categorie/toevoegen">Categorie toevoegen</a> <br>
-    <a href="/overzicht">Overzicht</a>
-
+    <a href="/overzicht">Taakoverzicht</a> <br>
+    <a href="/categorie/overzicht">Categorieoverzicht</a> <!-- Nieuw: overzicht van alle categorieën met verwijderknop -->
 {% endblock %}
