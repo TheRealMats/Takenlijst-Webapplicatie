@@ -6,9 +6,9 @@ from models import Taak, Categorie
 from forms import TaakForm, CategorieForm
 from flask_wtf.csrf import CSRFProtect
 
-csrf = CSRFProtect(app)
 # Maakt de webapplicatie aan:
 app = Flask(__name__)
+csrf = CSRFProtect(app)
 
 # Koppelt de database (drie schuine strepen = huidige map):
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///taken.db'

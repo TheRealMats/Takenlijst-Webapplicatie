@@ -25,7 +25,7 @@ body {
 /* De knoppen zelf */
 .index_opmaak .btn {
     margin: 10px;   /* ruimte tussen de knoppen */
-    width: 200px;   /* alle knoppen even breed */
+    width: 400px;   /* alle knoppen even breed */
 }
 
 /* Titel op de indexpagina */
@@ -40,9 +40,16 @@ body {
 .index_opmaak p {
     color: #1a1a2e;
     font-size: 1.2rem;      /* iets groter dan standaard tekst */
-    margin-bottom: 120px;    /* ruimte tussen slogan en knoppen */
+    margin-bottom: 150px;    /* ruimte tussen slogan en knoppen */
 }
 
+/* tweede paragraph */
+.index_opmaak p2 {
+    color: #1a1a2e;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 
 
 /* Alles voor de taak_toevoegen.html pagina: */
