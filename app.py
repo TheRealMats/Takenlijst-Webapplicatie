@@ -4,7 +4,9 @@ from flask import Flask, render_template, redirect, url_for, request
 from extensions import db
 from models import Taak, Categorie
 from forms import TaakForm, CategorieForm
+from flask_wtf.csrf import CSRFProtect
 
+csrf = CSRFProtect(app)
 # Maakt de webapplicatie aan:
 app = Flask(__name__)
 
