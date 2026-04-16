@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
-
 {% block content %}
-
     {% for taak in taken %}
         {{ taak.titel }}
         {{ taak.beschrijving }}
-        {{ taak.categorie.naam }}   <!-- Hierbij wordt gebruik gemaakt van de directe relatie -->
+        {{ taak.categorie.naam if taak.categorie else 'Geen categorie' }}
         {{ taak.afgerond }}
+        <form method="POST" action="/taak/verwijderen/{{ taak.id }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit">Verwijderen</button>
+        </form>
     {% endfor %}
-
 {% endblock %}
