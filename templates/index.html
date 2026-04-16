@@ -1,13 +1,13 @@
-{% extends 'base.html' %}   <!-- Erft de opmaak van base.html -->
+{% extends 'base.html' %}
+{% block content %}
 
-{% block content %} <!-- Alles hiertussen wordt ingelaen in base.html -->
-
-    <div class="container text-center index_opmaak">    <!-- bootstrap classes, index_opmaak is eigen class! -->
-        <h1>Welkom bij Takenlijst</h1>
-        <p>Beheer je taken en categorieën op één plek.</p>
-        <a href="/taak/toevoegen" class="btn btn-primary btn-lg">Taak toevoegen</a>
-        <a href="/categorie/toevoegen" class="btn btn-primary btn-lg">Categorie toevoegen</a>
-        <a href="/overzicht" class="btn btn-primary btn-lg">Overzicht</a>
-    </div>
+<div class="container text-center index_opmaak">
+    <h1>Welkom bij Takenlijst</h1>
+    <p>Beheer je taken en categorieën op één plek.</p>
+    <a href="/taak/toevoegen" class="btn btn-primary btn-lg">Taak toevoegen</a>
+    <a href="/categorie/toevoegen" class="btn btn-primary btn-lg">Categorie toevoegen</a>
+    <a href="/overzicht" class="btn btn-primary btn-lg">Taakoverzicht</a>
+    <a href="/categorie/overzicht" class="btn btn-primary btn-lg">Categorieoverzicht</a>
+</div>
 
 {% endblock %}

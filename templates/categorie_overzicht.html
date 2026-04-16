@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Categorieoverzicht</h1>
+
+    {% if categorieën %}
+        {% for categorie in categorieën %}
+            <div>
+                <strong>{{ categorie.naam }}</strong> <!-- Categorienaam -->
+                - {{ categorie.beschrijving if categorie.beschrijving else 'Geen beschrijving' }} <!-- Beschrijving -->
+
+                <!-- Knop om categorie te verwijderen. Taken die hieraan gekoppeld zijn krijgen geen categorie meer, maar worden niet verwijderd -->
+                <form method="POST" action="/categorie/verwijderen/{{ categorie.id }}" style="display:inline">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit">Verwijderen</button>
+                </form>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Er zijn nog geen categorieën!</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Terug naar hoofdpagina</a>
+{% endblock %}
