@@ -77,7 +77,7 @@ def categorie_toevoegen():
         )
         db.session.add(nieuwe_categorie)
         db.session.commit()
-        return redirect(url_for('index'))
+        return redirect(url_for('categorie_overzicht'))
     return render_template('categorie_toevoegen.html', categorie_form=categorie_form)
 
 

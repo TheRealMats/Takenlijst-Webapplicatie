@@ -1,29 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
+    <div class="container mt-4 taak_overzicht">
     <h1>Taakoverzicht</h1>
 
     {% if taken %}
         {% for taak in taken %}
-            <div>
-                <strong>{{ taak.titel }}</strong> <br> <!-- Taaknaam -->
-                - {{ taak.beschrijving if taak.beschrijving else 'Geen beschrijving' }} <br> <!-- Beschrijving, of melding als die er niet is -->
+            <div class="card p-3 mb-3">
+                <h5>{{ taak.titel }}</h5> <br> <!-- Taaknaam -->
+                - Naam: {{ taak.beschrijving if taak.beschrijving else 'Geen beschrijving' }} <br> <!-- Beschrijving, of melding als die er niet is -->
                 - Categorie: {{ taak.categorie.naam if taak.categorie else 'Geen categorie' }} <br> <!-- Categorienaam via de relatie in models.py -->
-                - {{ 'Afgerond' if taak.afgerond else 'Nog bezig' }} <br> <br> <!-- Status van de taak -->
+                - Toestand: {{ 'Afgerond' if taak.afgerond else 'Nog bezig' }} <br> <br> <!-- Status van de taak -->
 
                 <!-- Knop om taak als afgerond/niet afgerond te markeren -->
                 <form method="POST" action="/taak/afgerond/{{ taak.id }}" style="display:inline">
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                    <button type="submit">{{ 'Zet op bezig' if taak.afgerond else 'Markeer afgerond' }}</button> <br>
+                    <button type="submit" class="btn btn-success btn-sm me-2">
+                        {{ 'Zet op bezig' if taak.afgerond else 'Markeer afgerond' }}
+                    </button> <br>
                 </form>
 
                 <!-- Knop om taak te verwijderen -->
                 <form method="POST" action="/taak/verwijderen/{{ taak.id }}" style="display:inline">
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                    <button type="submit">Verwijderen</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Verwijderen</button>
                 </form>
             </div>
         {% endfor %}
     {% else %}
         <p>Er zijn nog geen taken!</p>
     {% endif %}
+    </div>
 {% endblock %}

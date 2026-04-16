@@ -40,7 +40,7 @@ body {
 .index_opmaak p {
     color: #1a1a2e;
     font-size: 1.2rem;      /* iets groter dan standaard tekst */
-    margin-bottom: 150px;    /* ruimte tussen slogan en knoppen */
+    margin-bottom: 200px;    /* ruimte tussen slogan en knoppen */
 }
 
 /* tweede paragraph */
@@ -55,15 +55,110 @@ body {
 /* Alles voor de taak_toevoegen.html pagina: */
 
 /* Centreert het formulier midden op de pagina */
-.formulier_opmaak {
+.taak_formulier_opmaak {
     min-height: calc(100vh - 56px); /* volledige hoogte minus de navbar */
     display: flex;                   /* zet uitlijning aan */
     justify-content: center;         /* centreert verticaal */
     align-items: center;             /* centreert horizontaal */
-    color: #5fffb4;
 }
 
 /* Breedte van het formulierkaartje */
-.formulier_opmaak .card {
-    width: 500px;   /* pas dit getal aan naar wat je mooi vindt */
+.taak_formulier_opmaak .card {
+    width: 700px;   /* pas dit getal aan naar wat je mooi vindt */
+}
+
+/* Ruimte tussen de formuliervelden */
+.taak_formulier_opmaak .card label {
+    display: block;      /* zet het label op een eigen regel */
+    margin-top: 10px;    /* ruimte boven elk label */
+}
+
+.taak_formulier_opmaak .card input,
+.taak_formulier_opmaak .card select,
+.taak_formulier_opmaak .card textarea {
+    display: block;      /* zet het invoerveld op een eigen regel */
+    width: 100%;         /* invoerveld even breed als het kaartje */
+    margin-top: 5px;     /* kleine ruimte tussen label en invoerveld */
+}
+
+/* Ruimte boven de verzendknop */
+.taak_formulier_opmaak .card input[type="submit"] {
+    margin-top: 20px;    /* extra ruimte boven de knop */
+    width: auto;         /* knop niet de volle breedte */
+}
+
+
+
+/* Alles voor de categorie_toevoegen.html pagina: */
+
+/* Centreert het formulier midden op de pagina */
+.categorie_formulier_opmaak {
+    min-height: calc(100vh - 56px); /* volledige hoogte minus de navbar */
+    display: flex;                   /* zet uitlijning aan */
+    justify-content: center;         /* centreert verticaal */
+    align-items: center;             /* centreert horizontaal */
+}
+
+/* Breedte van het formulierkaartje */
+.categorie_formulier_opmaak .card {
+    width: 700px;   /* pas dit getal aan naar wat je mooi vindt */
+}
+
+/* Ruimte tussen de formuliervelden */
+.categorie_formulier_opmaak .card label {
+    display: block;      /* zet het label op een eigen regel */
+    margin-top: 10px;    /* ruimte boven elk label */
+}
+
+.categorie_formulier_opmaak .card input,
+.categorie_formulier_opmaak .card textarea {
+    display: block;      /* zet het invoerveld op een eigen regel */
+    width: 100%;         /* invoerveld even breed als het kaartje */
+    margin-top: 5px;     /* kleine ruimte tussen label en invoerveld */
+}
+
+/* Ruimte boven de verzendknop */
+.categorie_formulier_opmaak .card input[type="submit"] {
+    margin-top: 20px;    /* extra ruimte boven de knop */
+    width: auto;         /* knop niet de volle breedte */
+}
+
+
+
+/* alles voor de (taak) overzicht: */
+
+.taak_overzicht {
+    min-height: calc(100vh - 56px);
+}
+
+.taak_overzicht h1 {
+    margin-top: 100px;
+}
+
+.taak_overzicht h5 {
+    font-weight: bold;
+}
+
+.taak_overzicht .card {
+    margin-top: 100px;
+}
+
+
+
+/* alles voor het categorie_overzicht: */
+
+.taak_overzicht {
+    min-height: calc(100vh - 56px);
+}
+
+.taak_overzicht h1 {
+    margin-top: 100px;
+}
+
+.taak_overzicht h5 {
+    font-weight: bold;
+}
+
+.taak_overzicht .card {
+    margin-top: 100px;
 }

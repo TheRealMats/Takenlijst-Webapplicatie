@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="container mt-4 taak_overzicht">
     <h1>Categorieoverzicht</h1>
 
     {% if categorieën %}
         {% for categorie in categorieën %}
-            <div>
+            <div class="card p-3 mb-3">
                 <strong>{{ categorie.naam }}</strong> <br> <!-- Categorienaam -->
                 - {{ categorie.beschrijving if categorie.beschrijving else 'Geen beschrijving' }} <br><br> <!-- Beschrijving -->
 
@@ -19,4 +20,5 @@
     {% else %}
         <p>Er zijn nog geen categorieën!</p>
     {% endif %}
+    </div>
 {% endblock %}
