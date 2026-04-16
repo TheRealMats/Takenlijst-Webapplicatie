@@ -1,13 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for taak in taken %}
-        {{ taak.titel }}
-        {{ taak.beschrijving }}
-        {{ taak.categorie.naam if taak.categorie else 'Geen categorie' }}
-        {{ taak.afgerond }}
-        <form method="POST" action="/taak/verwijderen/{{ taak.id }}">
-            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-            <button type="submit">Verwijderen</button>
-        </form>
-    {% endfor %}
+    <h1>Taakoverzicht</h1>
+
+    {% if taken %}
+        {% for taak in taken %}
+            <div>
+                <strong>{{ taak.titel }}</strong> <!-- Taaknaam -->
+                - {{ taak.beschrijving if taak.beschrijving else 'Geen beschrijving' }} <!-- Beschrijving, of melding als die er niet is -->
+                - Categorie: {{ taak.categorie.naam if taak.categorie else 'Geen categorie' }} <!-- Categorienaam via de relatie in models.py -->
+                - {{ 'Afgerond ✓' if taak.afgerond else 'Nog bezig' }} <!-- Status van de taak -->
+
+                <!-- Knop om taak als afgerond/niet afgerond te markeren -->
+                <form method="POST" action="/taak/afgerond/{{ taak.id }}" style="display:inline">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit">{{ 'Zet op bezig' if taak.afgerond else 'Markeer afgerond' }}</button>
+                </form>
+
+                <!-- Knop om taak te verwijderen -->
+                <form method="POST" action="/taak/verwijderen/{{ taak.id }}" style="display:inline">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit">Verwijderen</button>
+                </form>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Er zijn nog geen taken!</p>
+    {% endif %}
+
+    <br>
+    <a href="/">Terug naar hoofdpagina</a>
 {% endblock %}
