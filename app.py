@@ -52,6 +52,20 @@ def categorie_toevoegen():
         return redirect(url_for('index'))
     return render_template('categorie_toevoegen.html', categorie_form=categorie_form)
 
+@app.route('/taak/verwijderen/<int:taak_id>', methods=['POST'])    # Verwijdert een taak op basis van zijn ID
+def taak_verwijderen(taak_id):
+    taak = Taak.query.get_or_404(taak_id)   # Zoekt de taak op, geeft 404 als hij niet bestaat
+    db.session.delete(taak)
+    db.session.commit()
+    return redirect(url_for('overzicht'))
+
+@app.route('/categorie/verwijderen/<int:categorie_id>', methods=['POST'])    # Verwijdert een categorie op basis van zijn ID
+def categorie_verwijderen(categorie_id):
+    categorie = Categorie.query.get_or_404(categorie_id)    # Zoekt de categorie op, geeft 404 als hij niet bestaat
+    db.session.delete(categorie)
+    db.session.commit()
+    return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     with app.app_context():
