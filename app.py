@@ -21,7 +21,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/overzicht', methods=['GET'])   # Toont alle taken uit de database
+@app.route('/taak/overzicht', methods=['GET'])   # Toont alle taken uit de database
 def overzicht():
     taken = Taak.query.all()
     return render_template('overzicht.html', taken=taken)
