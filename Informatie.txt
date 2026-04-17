@@ -1,4 +1,4 @@
-We maken een taken-webapplicatie. Deze moet het volgende kunnen (dit is voor overzichtelijkheid om goed te weten wat erin moet komen):
+We maken een taken-webapplicatiee. Deze moet het volgende kunnen (dit is voor overzichtelijkheid om goed te weten wat erin moet komen):
 
 1. Verbinding maken met database om taken in op te slaan.
 2. Tabellen (model) maken om de gegevens in de categoriseren en op te slaan. Deze staan in de database.
