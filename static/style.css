@@ -2,7 +2,7 @@
 
 
 
-/* Aalle van de hele pagina */
+/* Aalle van de hele pagina */ 
 
 body {
     background-color: #ffc423;
@@ -143,22 +143,30 @@ body {
     margin-top: 100px;
 }
 
+.taak_overzicht .btn {
+    width: 150px
+}
+
 
 
 /* alles voor het categorie_overzicht: */
 
-.taak_overzicht {
+.categorie_overzicht {
     min-height: calc(100vh - 56px);
 }
 
-.taak_overzicht h1 {
+.categorie_overzicht h1 {
     margin-top: 100px;
 }
 
-.taak_overzicht h5 {
+.categorie_overzicht h5 {
     font-weight: bold;
 }
 
-.taak_overzicht .card {
+.categorie_overzicht .card {
     margin-top: 100px;
+}
+
+.categorie_overzicht .btn {
+    width: 150px
 }

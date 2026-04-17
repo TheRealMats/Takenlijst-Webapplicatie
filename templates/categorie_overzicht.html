@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container mt-4 taak_overzicht">
+    <div class="container mt-4 categorie_overzicht">
     <h1>Categorieoverzicht</h1>
 
     {% if categorieën %}
         {% for categorie in categorieën %}
             <div class="card p-3 mb-3">
-                <strong>{{ categorie.naam }}</strong> <br> <!-- Categorienaam -->
-                - {{ categorie.beschrijving if categorie.beschrijving else 'Geen beschrijving' }} <br><br> <!-- Beschrijving -->
+                <h5>{{ categorie.naam }}</h5> <br> <!-- Categorienaam -->
+                <strong>Beschrijving:</strong> {{ categorie.beschrijving if categorie.beschrijving else 'Geen beschrijving' }} <br><br> <!-- Beschrijving -->
 
                 <!-- Knop om categorie te verwijderen. Taken die hieraan gekoppeld zijn krijgen geen categorie meer, maar worden niet verwijderd -->
                 <form method="POST" action="/categorie/verwijderen/{{ categorie.id }}" style="display:inline">
                     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                    <button type="submit">Verwijderen</button>
+                    <button type="submit" class="btn btn-danger btn-sm">Verwijderen</button>
                 </form>
             </div>
         {% endfor %}
